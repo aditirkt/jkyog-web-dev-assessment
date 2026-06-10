@@ -5,16 +5,19 @@ import { fetchEvents } from "./api";
 /**
  * STARTER SCAFFOLD — candidate-facing.
  *
- * This proves the data source works (fetch + loading state + render).
- * It is NOT the finished assessment. Your job (see the brief) is to add:
+ * This ONLY proves the data source works (fetch + loading state + render a
+ * bare list). It is intentionally unstyled and minimal.
+ *
+ * YOUR job (see the brief) is to design and build the full experience:
+ *   - design the UI with the JKYog brand palette (see README)
+ *   - a button on each event that navigates to that event's own page
  *   - search by title + free/paid filter
- *   - event detail view + Register flow
- *   - a validated registration form (required name/email, valid email,
- *     seats requested <= seatsRemaining)
+ *   - event detail page + a validated registration form
+ *     (required name/email, valid email, seats requested <= seatsRemaining)
  *   - confirmation + decrement seatsRemaining on success
  *   - empty + error states, responsive layout, accessibility basics
  *
- * Feel free to restructure everything below. It's just a starting point.
+ * Restructure everything below — it's just a starting point.
  */
 export function App() {
   const [events, setEvents] = useState<EventItem[]>([]);
@@ -26,56 +29,21 @@ export function App() {
       .finally(() => setLoading(false));
   }, []);
 
+  if (loading) return <p className="container">Loading events…</p>;
+
   return (
     <main className="container">
-      <header>
-        <h1>JKYog Upcoming Events</h1>
-        <p className="subtitle">
-          Starter scaffold — build the registration experience on top of this.
-        </p>
-      </header>
-
-      {loading ? (
-        <p>Loading events…</p>
-      ) : (
-        <div className="grid">
-          {events.map((ev) => (
-            <article key={ev.id} className="card">
-              <img src={ev.image} alt="" />
-              <div className="card-body">
-                <span className="badge">{ev.category}</span>
-                <h2>{ev.title}</h2>
-                <p className="meta">
-                  {new Date(ev.date).toLocaleDateString(undefined, {
-                    weekday: "short",
-                    month: "short",
-                    day: "numeric",
-                    year: "numeric",
-                  })}{" "}
-                  · {ev.location}
-                </p>
-                <p className="price">{ev.price === 0 ? "Free" : `$${ev.price}`}</p>
-                <p className="seats">
-                  {ev.seatsRemaining > 0
-                    ? `${ev.seatsRemaining} seats left`
-                    : "Sold out"}
-                </p>
-                {/*
-                  TODO (your task): clicking this button must navigate to THIS
-                  event's own detail/registration page (e.g. /events/:id).
-                  Wire up routing — right now it does nothing.
-                */}
-                <button
-                  className="btn-primary"
-                  disabled={ev.seatsRemaining === 0}
-                >
-                  {ev.seatsRemaining === 0 ? "Sold out" : "View details →"}
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
-      )}
+      <h1>JKYog Upcoming Events</h1>
+      <p>{events.length} events loaded from the API. Now build the real thing.</p>
+      <ul>
+        {events.map((ev) => (
+          <li key={ev.id}>
+            {ev.title} — {new Date(ev.date).toLocaleDateString()} —{" "}
+            {ev.location} — {ev.price === 0 ? "Free" : `$${ev.price}`} —{" "}
+            {ev.seatsRemaining} seats left
+          </li>
+        ))}
+      </ul>
     </main>
   );
 }

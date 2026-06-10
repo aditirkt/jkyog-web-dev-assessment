@@ -1,134 +1,16 @@
-/* JKYog brand palette — reuse these variables in your own components. */
-:root {
-  --jk-primary: #ef6f1f; /* saffron — primary actions / buttons */
-  --jk-primary-deep: #e5652a; /* hover / pressed */
-  --jk-accent: #35349b; /* brand purple — headers / highlights */
-  --jk-accent-deep: #241881; /* navy */
-  --jk-bg: #fdf3e4; /* page background (cream) */
-  --jk-surface: #fffbf2; /* cards (milky white) */
-  --jk-border: #f0ebe1; /* borders / dividers (warm gray) */
-  --jk-heading: #291900; /* heading text */
-  --jk-text: #645743; /* body / muted text (earth) */
-  --jk-success: #28a736;
-  --jk-error: #ef1f1f;
-}
-
-* {
-  box-sizing: border-box;
-}
-
+/*
+  Intentionally minimal. Styling and design are YOUR job — use the JKYog
+  brand palette from the README. Replace / extend this however you like.
+*/
 body {
   margin: 0;
   font-family: system-ui, -apple-system, sans-serif;
-  color: var(--jk-text);
-  background: var(--jk-bg);
   line-height: 1.5;
+  color: #1a1a1a;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 1rem 4rem;
-}
-
-h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: var(--jk-accent);
-}
-
-.subtitle {
-  color: var(--jk-text);
-  margin-top: 0.25rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
-
-.card {
-  background: var(--jk-surface);
-  border: 1px solid var(--jk-border);
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-}
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  background: var(--jk-border);
-}
-
-.card-body {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.card-body h2 {
-  font-size: 1.1rem;
-  margin: 0.4rem 0;
-  color: var(--jk-heading);
-}
-
-.badge {
-  display: inline-block;
-  width: fit-content;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  background: rgba(53, 52, 155, 0.1);
-  color: var(--jk-accent);
-  padding: 0.2rem 0.5rem;
-  border-radius: 999px;
-}
-
-.meta {
-  color: var(--jk-text);
-  font-size: 0.85rem;
-  margin: 0.25rem 0;
-}
-
-.price {
-  font-weight: 600;
-  margin: 0.25rem 0;
-  color: var(--jk-heading);
-}
-
-.seats {
-  font-size: 0.85rem;
-  color: var(--jk-success);
-  margin: 0 0 0.75rem;
-}
-
-/* Primary button — saffron with deep-orange hover. */
-.btn-primary {
-  margin-top: auto;
-  background: var(--jk-primary);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s ease;
-}
-
-.btn-primary:hover:not(:disabled) {
-  background: var(--jk-primary-deep);
-}
-
-.btn-primary:disabled {
-  background: var(--jk-border);
-  color: var(--jk-text);
-  cursor: not-allowed;
+  padding: 1.5rem 1rem;
 }

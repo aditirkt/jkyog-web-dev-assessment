@@ -61,7 +61,7 @@ Don't ship default/unstyled HTML — we want to see design sense.
 
 - The **button** in requirement #2 should use the saffron primary (`#EF6F1F`) with the
   deep-orange hover state (`#E5652A`).
-- The starter (`src/index.css`) already defines these as CSS variables (`--jk-*`) — reuse them.
+- The starter is intentionally **unstyled** — the design is yours to build from scratch.
 - Tailwind / CSS modules / styled-components all fine; consistency matters more than the tool.
 
 ## Deliverable
