@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "title": "Sunday Meditation & Satsang",
+    "date": "2026-07-12T09:00:00.000Z",
+    "location": "JKYog Center, Allen, TX",
+    "seatsRemaining": 45,
+    "price": 0,
+    "category": "Meditation",
+    "description": "A guided morning meditation followed by satsang and group discussion. Open to all levels. Mats and refreshments provided.",
+    "image": "https://picsum.photos/seed/satsang/600/400"
+  },
+  {
+    "id": "2",
+    "title": "Weekend Yoga Retreat",
+    "date": "2026-08-22T07:30:00.000Z",
+    "location": "Radha Krishna Temple, Allen, TX",
+    "seatsRemaining": 18,
+    "price": 149,
+    "category": "Retreat",
+    "description": "A two-day immersive retreat covering asana, pranayama, and the philosophy of mind management. Includes sattvic meals.",
+    "image": "https://picsum.photos/seed/retreat/600/400"
+  },
+  {
+    "id": "3",
+    "title": "Introduction to Bhagavad Gita",
+    "date": "2026-07-19T18:00:00.000Z",
+    "location": "Online (Zoom)",
+    "seatsRemaining": 120,
+    "price": 0,
+    "category": "Lecture",
+    "description": "An accessible 6-week online course on the timeless wisdom of the Bhagavad Gita and how to apply it in daily life.",
+    "image": "https://picsum.photos/seed/gita/600/400"
+  },
+  {
+    "id": "4",
+    "title": "Kids Character Building Workshop",
+    "date": "2026-09-05T10:00:00.000Z",
+    "location": "JKYog Center, Allen, TX",
+    "seatsRemaining": 30,
+    "price": 25,
+    "category": "Workshop",
+    "description": "Bal-Mukund program teaching values, focus, and confidence to children aged 6-12 through stories, games, and activities.",
+    "image": "https://picsum.photos/seed/kids/600/400"
+  },
+  {
+    "id": "5",
+    "title": "Annual Janmashtami Celebration",
+    "date": "2026-08-16T17:00:00.000Z",
+    "location": "Radha Krishna Temple, Allen, TX",
+    "seatsRemaining": 5,
+    "price": 0,
+    "category": "Festival",
+    "description": "Celebrate the birth of Lord Krishna with kirtan, abhishek, cultural performances, and prasad. Family friendly.",
+    "image": "https://picsum.photos/seed/janmashtami/600/400"
+  },
+  {
+    "id": "6",
+    "title": "Pranayama & Breathwork Intensive",
+    "date": "2026-07-26T08:00:00.000Z",
+    "location": "Online (Zoom)",
+    "seatsRemaining": 60,
+    "price": 49,
+    "category": "Workshop",
+    "description": "A half-day deep dive into breathing techniques for stress relief, energy, and focus. Suitable for beginners.",
+    "image": "https://picsum.photos/seed/pranayama/600/400"
+  },
+  {
+    "id": "7",
+    "title": "Seva Day: Community Service",
+    "date": "2026-09-12T09:30:00.000Z",
+    "location": "Allen Community Park, TX",
+    "seatsRemaining": 0,
+    "price": 0,
+    "category": "Service",
+    "description": "Join us for a day of selfless service — park cleanup, food distribution, and community outreach. (Currently full — join the waitlist.)",
+    "image": "https://picsum.photos/seed/seva/600/400"
+  },
+  {
+    "id": "8",
+    "title": "Music & Kirtan Evening",
+    "date": "2026-08-02T19:00:00.000Z",
+    "location": "JKYog Center, Allen, TX",
+    "seatsRemaining": 80,
+    "price": 15,
+    "category": "Music",
+    "description": "An uplifting evening of devotional music and kirtan with live instruments. Come sing along and find inner peace.",
+    "image": "https://picsum.photos/seed/kirtan/600/400"
+  }
+]
