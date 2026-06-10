@@ -60,6 +60,17 @@ export function App() {
                     ? `${ev.seatsRemaining} seats left`
                     : "Sold out"}
                 </p>
+                {/*
+                  TODO (your task): clicking this button must navigate to THIS
+                  event's own detail/registration page (e.g. /events/:id).
+                  Wire up routing — right now it does nothing.
+                */}
+                <button
+                  className="btn-primary"
+                  disabled={ev.seatsRemaining === 0}
+                >
+                  {ev.seatsRemaining === 0 ? "Sold out" : "View details →"}
+                </button>
               </div>
             </article>
           ))}

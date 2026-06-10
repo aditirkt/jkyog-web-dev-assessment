@@ -29,12 +29,40 @@ sample data (`src/events.fallback.json`) so it always runs.
 ## What to build (see the full brief for details)
 
 1. Search events by title + filter by free/paid.
-2. Event detail view with a **Register** button.
-3. Registration form — validate: name & email required, valid email format,
+2. **Each event card must have a button** (e.g. "View Details" / "Register").
+   **Clicking it navigates to that event's own page** — a detail/registration page
+   showing the full event info. Use client-side routing (e.g. React Router) or a
+   view-state switch; either is fine, but the URL/view must change to the selected event.
+3. On the event page: a **Register** button that opens the registration form.
+4. Registration form — validate: name & email required, valid email format,
    seats requested cannot exceed `seatsRemaining`.
-4. On success: confirmation + decrement that event's `seatsRemaining`.
-5. Loading, empty ("no results"), and error states.
-6. Responsive (mobile + desktop) + accessibility basics (labels, semantic HTML).
+5. On success: confirmation + decrement that event's `seatsRemaining`.
+6. Loading, empty ("no results"), and error states.
+7. Responsive (mobile + desktop) + accessibility basics (labels, semantic HTML).
+
+## Design — use the JKYog theme
+
+Style the UI with the **official JKYog brand palette** (saffron + deep purple + cream).
+Don't ship default/unstyled HTML — we want to see design sense.
+
+| Role | Color | Hex |
+|------|-------|-----|
+| **Primary action** (buttons, links) | Saffron orange | `#EF6F1F` |
+| Primary action — hover/pressed | Deep orange | `#E5652A` |
+| **Brand accent** (headers, highlights) | Brand purple | `#35349B` |
+| Accent — deep | Navy | `#241881` |
+| **Page background** | Cream | `#FDF3E4` |
+| Surface / cards | Milky white | `#FFFBF2` |
+| Borders / dividers | Warm gray | `#F0EBE1` |
+| **Heading text** | Near-black brown | `#291900` |
+| Body / muted text | Earth brown | `#645743` |
+| Success (e.g. confirmation) | Green | `#28A736` |
+| Error (e.g. validation) | Red | `#EF1F1F` |
+
+- The **button** in requirement #2 should use the saffron primary (`#EF6F1F`) with the
+  deep-orange hover state (`#E5652A`).
+- The starter (`src/index.css`) already defines these as CSS variables (`--jk-*`) — reuse them.
+- Tailwind / CSS modules / styled-components all fine; consistency matters more than the tool.
 
 ## Deliverable
 
